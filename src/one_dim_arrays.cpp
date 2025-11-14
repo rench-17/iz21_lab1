@@ -1,4 +1,4 @@
-#include "../headers/one_dim_arrays.h"
+#include "../headers/header.h"
 
 
 double* make_array(int n)

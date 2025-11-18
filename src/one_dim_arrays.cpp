@@ -12,21 +12,23 @@ void delete_array(double* arr)
     delete [] arr;
 }
 
-void select_sort_one_dim_array(double* arr, int n)
+double* select_sort_one_dim_array(double* arr, int n)
 {
-    for (int i = 0; i < n; i++)
-    {
-        int min = arr[0], min_num = 0; 
-        for (int j  = 0; j < n-i; j++)
-        {
-            if(min > arr[j])
-            {
-                min = arr[j]; 
-                min_num = j;
-            }
-        }
-        int tmp = arr[min_num];
-        arr[min_num] = arr[i-n];
-        arr[i-n] = tmp;
+    double* sorted_arr = new double[n];
+    for (int i = 0; i < n; i++)sorted_arr[i] = arr[i];
+
+    for (int i = 0; i < n; i++){
+        int min = i;
+        for ( int j = i + 1; j < n; j++)if (sorted_arr[min]> sorted_arr[j])min = j;
+        // swap(sorted_arr[i], sorted_arr[min]);
+        double tmp = sorted_arr[i];
+        sorted_arr[i] = sorted_arr[min];
+        sorted_arr[min] = tmp;
     }
+    return sorted_arr;
+}
+
+void print_one_dim_array(double *arr, int n){
+    for ( int i = 0; i < n; i ++) std::cout << arr[i] << " " ;
+    std::cout << std::endl;
 }

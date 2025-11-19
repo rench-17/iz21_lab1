@@ -4,7 +4,7 @@
 
 // #include ""
 //  using namespace std;
-int main (){
+int not_main (){
     int n;
     std::cin >> n;
     
@@ -17,6 +17,26 @@ int main (){
 
     delete_array(aboba);
     delete_array(sorted_aboba);
+
+    return 0;
+}
+
+int main (){
+    int rows, cols;
+
+    std::cin >> rows >> cols;
+
+    double** aboba = make_array(rows, cols);
+    enter_data(aboba, rows, cols);
+
+    columns_without_zeros(aboba, rows, cols);
+
+    double** sorted_arr = sort_rows(aboba, rows, cols);
+
+    print_array(sorted_arr, rows, cols);
+
+    delete_array(sorted_arr, rows);
+    delete_array(aboba, rows);
 
     return 0;
 }

@@ -3,7 +3,7 @@
 
 double* make_array(int n)
 {
-    double* tmp = new double[n];
+    double* tmp = new double[n]{};
     return tmp;
 }
 
@@ -31,4 +31,10 @@ double* select_sort_one_dim_array(double* arr, int n)
 void print_array(double *arr, int n){
     for ( int i = 0; i < n; i ++) std::cout << arr[i] << " " ;
     std::cout << std::endl;
+}
+
+void enter_data(double* arr, int n){
+    for (int i = 0; i < n; i++){
+        std::cin >> arr[i];
+    }
 }

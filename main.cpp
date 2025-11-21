@@ -1,5 +1,6 @@
 //#include "mainMenu.cpp"
 #include "headers/header.h"
+#include <ostream>
 // #include <iostream>
 
 // #include ""
@@ -22,21 +23,26 @@ int not_main (){
 }
 
 int main (){
-    int rows, cols;
+    // int rows, cols;
 
-    std::cin >> rows >> cols;
+    // std::cin >> rows >> cols;
 
-    double** aboba = make_array(rows, cols);
-    enter_data(aboba, rows, cols);
+    // double** aboba = make_array(rows, cols);
+    // enter_data(aboba, rows, cols);
 
-    columns_without_zeros(aboba, rows, cols);
+    // columns_without_zeros(aboba, rows, cols);
 
-    double** sorted_arr = sort_rows(aboba, rows, cols);
+    // double** sorted_arr = sort_rows(aboba, rows, cols);
 
-    print_array(sorted_arr, rows, cols);
+    // print_array(sorted_arr, rows, cols);
 
-    delete_array(sorted_arr, rows);
-    delete_array(aboba, rows);
+    // delete_array(sorted_arr, rows);
+    // delete_array(aboba, rows);
+
+    char word[30];
+    std::cout << "Enter word to find" << std::endl;
+    std::cin >>word;
+    print_sentence_with_word(word);
 
     return 0;
 }

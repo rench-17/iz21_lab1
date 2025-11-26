@@ -20,7 +20,6 @@ double* select_sort_one_dim_array(double* arr, int n)
     for (int i = 0; i < n; i++){
         int min = i;
         for ( int j = i + 1; j < n; j++)if (sorted_arr[min]> sorted_arr[j])min = j;
-        // swap(sorted_arr[i], sorted_arr[min]);
         double tmp = sorted_arr[i];
         sorted_arr[i] = sorted_arr[min];
         sorted_arr[min] = tmp;
@@ -30,11 +29,12 @@ double* select_sort_one_dim_array(double* arr, int n)
 
 void print_array(double *arr, int n){
     for ( int i = 0; i < n; i ++) std::cout << arr[i] << " " ;
-    std::cout << std::endl;
+    std::cout << '\n';
 }
 
 void enter_data(double* arr, int n){
     for (int i = 0; i < n; i++){
         std::cin >> arr[i];
     }
+    clear_cin();
 }

@@ -2,11 +2,12 @@
 
 void subtask_2_1(){
     int rows, cols;
-    std::cout << "Enter matrix dimensions" << std::endl;
+    std::cout << "Enter matrix dimensions" << '\n';
     std::cin >> rows >> cols;
+    clear_cin();
 
     double** arr = make_array(rows, cols);
-    std::cout << "Enter matrix values" << std::endl;
+    std::cout << "Enter matrix values" << '\n';
     enter_data(arr, rows, cols);
 
     columns_without_zeros(arr, rows, cols);
@@ -16,6 +17,7 @@ void subtask_2_1(){
 void subtask_2_2(){
     int rows, cols;
     std::cin >> rows >> cols;
+    clear_cin();
 
     double **arr = make_array(rows, cols);
     enter_data(arr, rows, cols);

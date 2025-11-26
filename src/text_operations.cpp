@@ -47,24 +47,25 @@ bool find_substring(const char *str, const char *substr){
 
 void print_sentence_with_word(const char word[]){
     char filename[30];
-    std::cout << "Enter filename" << std::endl;
+    std::cout << "Enter filename" << '\n';
     std::cin >> filename;
+    clear_cin();
     char* buff;
 
     std::fstream file;
     if (!open_file(file, filename)){
-        std::cout << "Cannot open file" << std::endl;
+        std::cout << "Cannot open file" << '\n';
         return;
     }else{
-        std::cout << "File opened correctly" << std::endl;
+        std::cout << "File opened correctly" << '\n';
     }
     while(!file.eof()){
         buff = read_sentence(file);
         if (find_substring(buff, word)){
-            std::cout << buff  << std::endl;
-            // std::cout << buff << std::endl;
+            std::cout << buff  << '\n';
+            // std::cout << buff << '\n';
         }else{
-       //     std::cout << buff << " " << "not found" << std::endl;
+       //     std::cout << buff << " " << "not found" << '\n';
         }
         delete[] buff;
     }

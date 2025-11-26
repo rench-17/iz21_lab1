@@ -20,7 +20,7 @@ void print_array(double** arr, int rows, int cols){
         for (int j = 0; j < cols; j++){
             std::cout<<arr[i][j] << " ";
         }
-        std::cout << std::endl;
+        std::cout << '\n';
     }
 }
 
@@ -30,6 +30,7 @@ void enter_data(double** arr, int rows, int cols){
             std::cin >> arr[i][j];
         }
     }
+    clear_cin();
 }
 
 double ** select_sort_by_row_char_two_dim_array(double** arr, int rows, int cols, double* row_char){
@@ -67,10 +68,10 @@ void columns_without_zeros(double** arr, int rows, int cols){
         }
     }
 
-    std::cout << val << std::endl;
+    std::cout << val << '\n';
     // print_array(numbers, val);
     for (int i = 0; i < val; i++)std::cout << numbers[i] << " ";
-    std::cout << std::endl;
+    std::cout << '\n';
 
     delete[] numbers;
     return;

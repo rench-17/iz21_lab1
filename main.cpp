@@ -3,24 +3,25 @@
 #include <ostream>
 // #include <iostream>
 
-// #include ""
-//  using namespace std;
-int not_main (){
-    int n;
-    std::cin >> n;
+// // #include ""
+// //  using namespace std;
+// int not_main (){
+//     int n;
+//     std::cin >> n;
     
-    double* aboba = make_array(n);
-    for (int i = 0; i < n; i++) std::cin >> aboba[i];
+//     double* aboba = make_array(n);
+//     for (int i = 0; i < n; i++) std::cin >> aboba[i];
 
-    double* sorted_aboba = select_sort_one_dim_array(aboba, n);
-    for (int i = 0; i < n; i++) std::cout << sorted_aboba[i] << " ";
-    std::cout << std::endl;
+//     double* sorted_aboba = select_sort_one_dim_array(aboba, n);
+//     for (int i = 0; i < n; i++) std::cout << sorted_aboba[i] << " ";
+//     std::cout << '\n';
 
-    delete_array(aboba);
-    delete_array(sorted_aboba);
+//     delete_array(aboba);
+//     delete_array(sorted_aboba);
 
-    return 0;
-}
+//     return 0;
+// }
+//====================================================
 
 int main (){
     // int rows, cols;
@@ -40,7 +41,7 @@ int main (){
     // delete_array(aboba, rows);
 //=====================================================
     // char word[30];
-    // std::cout << "Enter word to find" << std::endl;
+    // std::cout << "Enter word to find" << '\n';
     // std::cin >> word;
     // print_sentence_with_word(word);
 //=====================================================

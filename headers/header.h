@@ -8,6 +8,7 @@
 void menu();
 template <typename T>void swap(T& first, T& second);
 unsigned char cstrlen(const char* str);
+void clear_cin();
 
 //One Dimention
 double* make_array(int n);

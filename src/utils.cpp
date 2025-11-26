@@ -13,3 +13,7 @@ unsigned char cstrlen(const char *str){
     }
     return len;
 }
+void clear_cin(){
+    std::cin.clear();
+    std::cin.ignore(1000, '\n');
+}

@@ -1,48 +1,28 @@
 #include "../headers/header.h"
 
-void columns_without_zeros(double** arr, int rows, int cols){
-    int val = 0;
-    int* numbers = new int[cols];
+void subtask_2_1(){
+    int rows, cols;
+    std::cout << "Enter matrix dimensions" << std::endl;
+    std::cin >> rows >> cols;
 
-    for (int i = 0; i < cols; i++){
-        bool flag = false;
-        for (int j = 0; j < rows; j++){
-            if (arr[i][j] == 0.){
-                flag = true;
-                break;
-            }
-        }
-        if (!flag){
-            numbers[val] = i;
-            val++;
-        }
-    }
+    double** arr = make_array(rows, cols);
+    std::cout << "Enter matrix values" << std::endl;
+    enter_data(arr, rows, cols);
 
-    std::cout << val << std::endl;
-    // print_array(numbers, val);
-    for (int i = 0; i < val; i++)std::cout << numbers[i] << " ";
-    std::cout << std::endl;
-
-    delete[] numbers;
-    return;
+    columns_without_zeros(arr, rows, cols);
+    delete_array(arr, rows);
 }
 
-double** sort_rows(double** arr, int rows, int cols){
-    
+void subtask_2_2(){
+    int rows, cols;
+    std::cin >> rows >> cols;
 
-    double* row_char = make_array(rows);
-    for (int i = 0; i < rows; i++){
-        for (int j = 1; j < cols; j+=2){
-            if (arr[i][j] >= 0.)row_char[i]+= arr[i][j];          
-        }
-    }
+    double **arr = make_array(rows, cols);
+    enter_data(arr, rows, cols);
 
-    // for (int i = 0; i < rows; i++){
-    //     if ()
-    // }
-    double** sorted_arr = select_sort_by_row_char_two_dim_array(arr, rows, cols, row_char);
-    
+    double** sorted_arr = sort_rows(arr, rows, cols);
+    print_array(sorted_arr, rows, cols);
 
-    delete_array(row_char);
-    return sorted_arr;
+    delete_array(arr, rows);
+    delete_array(sorted_arr, rows);
 }

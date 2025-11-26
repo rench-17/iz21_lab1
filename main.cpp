@@ -38,11 +38,15 @@ int main (){
 
     // delete_array(sorted_arr, rows);
     // delete_array(aboba, rows);
-
-    char word[30];
-    std::cout << "Enter word to find" << std::endl;
-    std::cin >>word;
-    print_sentence_with_word(word);
+//=====================================================
+    // char word[30];
+    // std::cout << "Enter word to find" << std::endl;
+    // std::cin >> word;
+    // print_sentence_with_word(word);
+//=====================================================
+    menu();
+//=====================================================
+    // subtask3();
 
     return 0;
 }

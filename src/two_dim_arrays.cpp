@@ -11,8 +11,10 @@ double** make_array(int rows, int cols){
 void delete_array(double** arr, int rows){
     for ( int i = 0; i < rows; i++){
         delete[] arr[i];
+        arr[i] = nullptr;
     }
     delete[] arr;
+    arr = nullptr;
 }
 
 void print_array(double** arr, int rows, int cols){

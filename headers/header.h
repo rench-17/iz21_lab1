@@ -2,7 +2,7 @@
 #pragma once
 #include "iostream"
 #include "fstream"
-// #include 
+#include "cmath"
 
 // Utils
 void menu();
@@ -37,7 +37,9 @@ void print_sentence_with_word(const char word[]);
 
 
 //Task One
-
+void subtask_1_1();
+void subtask_1_2();
+void subtask_1_3();
 
 //Task Two
 void subtask_2_1();

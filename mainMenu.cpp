@@ -37,21 +37,30 @@ void menu(){
                     break;
 
                     case 1:
-
                         system("clear");
-                        std::cout << "Enter 0 to go back" << '\n';
+                        subtask_1_1();
+
+                        // system("clear");
+                        // std::cout << "Enter 0 to go back" << '\n';
                         std::cin >> tmp;
                         clear_cin();
 
                     break;
 
                     case 2:
-
                         system("clear");
+                        subtask_1_2();
+
+                        // system("clear");
                         std::cout << "Enter 0 to go back" << '\n';
                         std::cin >> tmp;
                         clear_cin();
-                }
+                        break;
+
+                    case 3:
+
+                        break;
+                    }   
                 break;
             case 2:
                 system("clear");

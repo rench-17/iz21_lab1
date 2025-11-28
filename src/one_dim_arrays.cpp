@@ -10,6 +10,7 @@ double* make_array(int n)
 void delete_array(double* arr)
 {
     delete [] arr;
+    arr = nullptr;
 }
 
 double* select_sort_one_dim_array(double* arr, int n)

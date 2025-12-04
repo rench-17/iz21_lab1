@@ -3,10 +3,12 @@
 void subtask_1_1()
 {
     int n;
+    std::cout << "Please enter number of array members" << '\n';
     std::cin >> n;
     clear_cin();
 
     double* arr = make_array(n);
+    std::cout << "Please enter array members values" << '\n';
     enter_data(arr, n);
 
     
@@ -15,32 +17,34 @@ void subtask_1_1()
     int coords[n];
     for (int i = 0; i < n; i ++){
         if (arr[i] > 0){
-            counter++;
+            coords[counter++] = i;
             summ+= arr[i];
-            coords[counter] = i;
         }
 
-        if (counter != 0){
-            std::cout << "Coordinats of array members above zero:" << '\n';
-            for (int i = 0; i < counter; i++){
-                std::cout << coords[i] << " ";
-            }
-            std::cout << '\n';
-            std::cout << "Numder of array members above zero: " << counter << '\n';
-            std::cout << "Sum of array members above zero: " << summ << '\n';
-        } else {
-            std::cout << "No array members above zero" << '\n';
-        }
     }   
+    if (counter != 0){
+        std::cout << "Coordinats of array members above zero:" << '\n';
+        for (int i = 0; i < counter; i++){
+            std::cout << coords[i] << " ";
+        }
+        std::cout << '\n';
+        std::cout << "Numder of array members above zero: " << counter << '\n';
+        std::cout << "Sum of array members above zero: " << summ << '\n';
+    } else {
+        std::cout << "No array members above zero" << '\n';
+    }
     delete_array(arr);
+    std::cout << "Press any key to continue" << '\n';
 } 
 
 void subtask_1_2()
 {
     int n;
+    std::cout << "Enter number of array members" << '\n';
     std::cin >> n;
     clear_cin();
 
+    std::cout << "Enter array member value" << '\n';
     double* arr = make_array(n);
     enter_data(arr, n);
     
@@ -70,7 +74,7 @@ void subtask_1_2()
     {
         std::cout << "All array members are equal" << '\n';
         while (!std::cin);
-        // return;
+        return;
     }
     
     for (int i = 0; i < n; i++)
@@ -166,13 +170,16 @@ void subtask_1_2()
 }
 
 void subtask_1_3()
-{
+{    
     int n;
+    std::cout << "Please enter number of array members" << '\n';
     std::cin >> n;
     clear_cin();
 
     double* arr = make_array(n);
+    std::cout << "Please enter array members values" << '\n';
     enter_data(arr, n);
+
 
     double* sorted_arr = select_sort_one_dim_array(arr, n);
 

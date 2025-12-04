@@ -1,5 +1,5 @@
 #include "headers/header.h"
-#include <cstdlib>
+// #include <cstdlib>
 
 void menu(){
     int mode = 0;
@@ -25,23 +25,21 @@ void menu(){
                 system("clear");
                 std::cout << "Curient task 1, One dimension arrays" << '\n';
                 std::cout << "Please choose subtask:" << '\n';
-                std::cout << "1 - Columns withouts zeros" << '\n';
-                std::cout << "2 - Sort rows by their chars" << '\n';
+                std::cout << "1 - Summ array memberss above zero" << '\n';
+                std::cout << "2 - Mul between min and max" << '\n';
+                std::cout << "3 - Sort array via selection sort" << '\n';
                 std::cout << "0 - return to previous menu" << '\n'; 
                 std::cin >> tmp;
                 clear_cin();
                 
                 switch (tmp){
                     case 0:
-                        // return;
                     break;
 
                     case 1:
                         system("clear");
                         subtask_1_1();
-
-                        // system("clear");
-                        // std::cout << "Enter 0 to go back" << '\n';
+                        
                         std::cin >> tmp;
                         clear_cin();
 
@@ -51,14 +49,18 @@ void menu(){
                         system("clear");
                         subtask_1_2();
 
-                        // system("clear");
                         std::cout << "Enter 0 to go back" << '\n';
                         std::cin >> tmp;
                         clear_cin();
                         break;
 
                     case 3:
+                        system("clear");
+                        subtask_1_3();
 
+                        std::cout << "Enter 0 to go back" << '\n';
+                        std::cin >> tmp;
+                        clear_cin();
                         break;
                     }   
                 break;
@@ -108,5 +110,4 @@ void menu(){
         }     
 
     }
-        // std::cout << mode << '\n';
 }

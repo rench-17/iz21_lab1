@@ -22,12 +22,11 @@ double** make_array(int rows, int cols);
 void delete_array(double** arr, int rows);
 void print_array(double** arr, int rows, int cols);
 void enter_data(double** arr, int rows, int cols);
-double ** select_sort_by_row_char_two_dim_array(double** arr, int rows, int cols, double* row_char);
+double** select_sort_by_row_char_two_dim_array(double** arr, int rows, int cols, double* row_char);
 void columns_without_zeros(double** arr, int rows, int cols);
 double** sort_rows(double** arr, int rows, int cols);
 
 //Char Array
-// std::fstream init
 bool open_file(std::fstream& file, const char* filename);
 void close_file(std::fstream& file);
 char* read_sentence(std::fstream& file);

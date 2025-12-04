@@ -16,10 +16,12 @@ void subtask_2_1(){
 
 void subtask_2_2(){
     int rows, cols;
+    std::cout << "Enter matrix dimensions" << '\n';
     std::cin >> rows >> cols;
     clear_cin();
 
-    double **arr = make_array(rows, cols);
+    double** arr = make_array(rows, cols);
+    std::cout << "Enter matrix values" << '\n';
     enter_data(arr, rows, cols);
 
     double** sorted_arr = sort_rows(arr, rows, cols);
